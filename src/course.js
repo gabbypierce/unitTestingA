@@ -7,7 +7,7 @@ class Course {
   }
 
   toString () {
-    // Example: Algorithms, MPCS 55001, 3 credits
+    // Ex: Algorithms, MPCS 55001, 3 credits
     return `${this.name}, ${this.department} ${this.number} (${this.credits} credits)`
   }
 }

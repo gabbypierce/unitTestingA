@@ -15,6 +15,6 @@ describe('Course Class Tests', () => {
     expect(str).toContain('Software Engineering');
     expect(str).toContain('SER330');
     expect(str).toContain('Software QA');
-    expect(str).toContain('3'); // or however you format credits
+    expect(str).toContain('3'); 
   });
 });

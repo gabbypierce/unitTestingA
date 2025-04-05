@@ -3,7 +3,6 @@ const Person = require('./person.js')
 class Instructor extends Person {
   constructor (lastName, firstName, school, dateOfBirth, username) {
     super(lastName, firstName, school, dateOfBirth, username, 'instructor')
-    // key = this.course.name
     this.course_list = []
   }
 

@@ -97,7 +97,7 @@ describe('Instructor Class Tests', () => {
   
     instructor.course_list.push(offering1, offering2);
   
-    const result = instructor.list_courses(); // no filters!
+    const result = instructor.list_courses(); // no filters
     expect(result.length).toBe(2);
     expect(result[0]).toContain('Cybersecurity');
     expect(result[1]).toContain('Web Dev');

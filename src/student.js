@@ -1,4 +1,4 @@
-const Person = require('./person.js') // Assuming person.js contains the Person class
+const Person = require('./person.js') 
 
 class Student extends Person {
   constructor (lastName, firstName, school, dateOfBirth, username) {

@@ -20,7 +20,6 @@ describe('Person Class Tests', () => {
   });
 
   test('Generates the correct email address', () => {
-    // Person.email is typically a getter in some code bases
     expect(person.email).toBe('jdoe@test.edu');
   });
 

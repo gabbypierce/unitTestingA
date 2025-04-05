@@ -26,8 +26,6 @@ describe('Student Class Tests', () => {
     const testCourse = new Course('Software Engineering', 'SER330', 'Software QA', 3);
     const offering = new CourseOffering(testCourse, '01', '2024', '1');
 
-    // In a real scenario, the Institution would register the student
-    // But you can test the Student side by manually pushing or calling a method
     student.courseList.push(offering);
 
     expect(student.courseList.length).toBe(1);
@@ -35,7 +33,6 @@ describe('Student Class Tests', () => {
   });
 
   test('Calculates credits correctly', () => {
-    // Add multiple offerings with different credit courses
     const course1 = new Course('Software Engineering', 'SER330', 'Software QA', 3);
     const offering1 = new CourseOffering(course1, '01', '2024', '1');
 
@@ -44,7 +41,6 @@ describe('Student Class Tests', () => {
 
     student.courseList.push(offering1, offering2);
 
-    // Student.credits typically sums the credits of the courses in courseList
     expect(student.credits).toBe(3 + 4);
   });
 
@@ -57,20 +53,20 @@ describe('Student Class Tests', () => {
     offering1.register_students([student]);
     offering2.register_students([student]);
   
-    offering1.submit_grade(student, 'A'); // 4.0
-    offering2.submit_grade(student, 'B'); // 3.0
+    offering1.submit_grade(student, 'A'); 
+    offering2.submit_grade(student, 'B'); 
   
     student.courseList.push(offering1, offering2);
   
     const gpa = student.gpa;
-    expect(gpa).toBeCloseTo(3.428, 2); // (4.0*3 + 3.0*4) / 7
+    expect(gpa).toBeCloseTo(3.428, 2); 
   });  
 
   test('toString() includes GPA and credit details', () => {
     const str = student.toString();
     expect(str).toContain('Doe');
     expect(str).toContain('Jane');
-    expect(str).toContain('Credits:'); // or however your code prints it
+    expect(str).toContain('Credits:'); 
     expect(str).toContain('GPA:');
   });
 

@@ -11,7 +11,7 @@ describe('Instructor-Tests', () => {
     let testInstitution;
     let instructor;
 
-    // This will run before each test case 
+    // will run before each test case 
     // Initialize a new institution instance and instructor
     beforeEach(() => {
         instructor = new Instructor();
@@ -27,14 +27,10 @@ describe('Instructor-Tests', () => {
         testInstitution.hire_instructor(sqaInstructor)
 
         // Assert
-        // Using the Object.Keys function we can extract an array of the keys for the
-        // faculty dictionary.
-        // This allows us to verify that there is 1 and only 1 value in the faculty list
+        // This lets us to verify that there is 1 and only 1 value in the faculty list
         expect(Object.keys(testInstitution.facultyList).length).toBe(1)
 
         // Another option to verify that the value matching the dictionary
-        // is equal
-        // The behavior you are validating here is that the method adds the right person
         expect(Object.keys(testInstitution.facultyList)).toStrictEqual(['dnicolini'])
     })
 
@@ -46,9 +42,6 @@ describe('Instructor-Tests', () => {
         // Act
         testInstitution.hire_instructor(sqaInstructor)
 
-        // This behavior is a bit sneaky because it simply logs the error and doesn't throw an error
-        // or report the behavior
-        // You generally can't assert against log statements - so our test expectations are the same
         testInstitution.hire_instructor(sqaInstructor)
 
         // Assert
@@ -71,7 +64,7 @@ describe('Instructor-Tests', () => {
         testInstitution.enroll_student(studentB);
         testInstitution.enroll_student(studentA);
 
-        console.log = jest.fn(); // mock console
+        console.log = jest.fn(); 
         testInstitution.listStudents();
 
         expect(console.log).toHaveBeenCalledWith(expect.stringContaining('Apple, Anna'));

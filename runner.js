@@ -6,7 +6,7 @@ const Instructor = require('./instructor.js')
 const Person = require('./person.js')
 const Student = require('./student.js')
 
-// Create an institution (of learning)
+// Create an institution
 // Institution
 const testInstitution = new Institution('Quinnipiac University', 'qu.edu')
 
@@ -15,7 +15,7 @@ const testPerson = new Person('lastName', 'firstName', 'test school', '1/1/2024'
 console.log(testPerson.toString())
 
 // Create and validate a Student
-// A Student is a Person
+// A Student is a Pesron
 // creator of NodeJS
 const seniorStudent = new Student('Ryan', 'Dahl', testInstitution, '1/1/2024', 'rdahl')
 console.log(seniorStudent.toString())
